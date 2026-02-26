@@ -52,8 +52,9 @@ SELECT nome, DATE_FORMAT(data_validade, '%d/%m/%Y') AS Data_Validade,
 -- |CONCAT para ADD 'R$'| FORMAT para ADD 2 casas decimais no preço e formatar a moeda | AS para dar apelido
  CONCAT('R$: ', FORMAT(preco, 2, 'pt_BR')) AS Preco FROM tb_produtos;
  -- *******************************************************************  
+-- Alterando os valores ta tabela (nome, preço e etc)
+UPDATE  tb_produtos SET preco = 8.99 WHERE  id = 1 OR id = 2; 
 
-UPDATE  tb_produtos SET preco = 8.99 WHERE  id = 1 OR id = 2; -- Alterando os valores ta tabela (nome, preço e etc)
 
 DELETE FROM tb_produtos WHERE id = 2;
 
